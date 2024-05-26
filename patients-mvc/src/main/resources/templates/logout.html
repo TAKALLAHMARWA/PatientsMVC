@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Logout - Hôpital Merve</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+<div layout:fragment="content1" class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center mb-4">Déconnexion</h2>
+            <p>Vous êtes sur le point de vous déconnecter de votre session.</p>
+            <p>Êtes-vous sûr de vouloir continuer ?</p>
+            <div class="text-center">
+                <a href="#" class="btn btn-danger">Déconnexion</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

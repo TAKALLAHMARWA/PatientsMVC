@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('/IMG/HOSPITAL.jpg');
+            background-size: cover; /
+            background-position: center;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 4rem 0;
+        }
+        .display-4 {
+            color: #007bff;
+        }
+        .lead {
+            color: #6c757d;
+        }
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .card-title {
+            color: #007bff;
+        }
+        .card-text {
+            color: #495057;
+        }
+        .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-primary:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="display-4">Bienvenue sur l'application de gestion des patients</h1>
+                <p class="lead">Gérez vos patients avec facilité</p>
+                <hr class="my-4">
+                <p>Recherchez des patients, consultez leurs détails et gérez leurs dossiers avec notre interface intuitive.</p>
+                <a th:href="@{/index}" class="btn btn-primary btn-lg">Commencer</a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Nouveaux patients</h5>
+                        <p class="card-text">Ajoutez de nouveaux patients à votre base de données</p>
+                        <a th:href="@{/formpatients}" class="btn btn-primary">Ajouter un patient</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Rechercher des patients</h5>
+                        <p class="card-text">Trouvez des patients par nom, date de naissance, ou d'autres critères</p>
+                        <a th:href="@{/index}" class="btn btn-primary">Rechercher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
